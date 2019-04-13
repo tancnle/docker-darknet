@@ -4,7 +4,7 @@ FROM ubuntu@sha256:017eef0b616011647b269b5c65826e2e2ebddbe5d1f8c1e56b3599fb14fab
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     build-essential=12.* \
-    ca-certificates=20180409 \
+    ca-certificates=* \
     curl=7.58.* \
     gcc=4:7.3.* \
     git=1:2.17* \
