@@ -1,18 +1,16 @@
 # YOLOv3 Object Detection with Darknet
 
+![Docker Automated build](https://img.shields.io/docker/cloud/automated/tancnle/darknet-yolo.svg?style=popout-square)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/tancnle/darknet-yolo.svg?style=popout-square)
+
 A convenient way to do object detection using YOLOv3 model via Docker.
 
 ## Usage
 
-Build a local Docker image
-```bash
-docker build -t docker-darknet:dev .
-```
-
 Run object detection on an image
 ```bash
 docker run --volume ${PWD}/output:/output \
-           --interactive docker-darknet:dev < interesting.png
+           --interactive --rm tancnle/darknet-yolo < interesting.png
 ```
 
 View the image with polygon-bounding boxes
