@@ -12,11 +12,11 @@ Run object detection on an image
 ```bash
 # YOLO v3
 docker run --volume ${PWD}/output:/output \
-           --interactive --rm tancnle/darknet-yolo < interesting.png
+           --interactive --rm tancnle/darknet-yolo:3 < interesting.png
 
 # YOLO v4
 docker run --volume ${PWD}/output:/output \
-           --interactive --rm tancnle/darknet-yolo-v4 < interesting.png
+           --interactive --rm tancnle/darknet-yolo:4 < interesting.png
 ```
 
 View the image with polygon-bounding boxes
