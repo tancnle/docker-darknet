@@ -24,8 +24,8 @@ RUN curl -sSLO https://github.com/AlexeyAB/darknet/releases/download/darknet_yol
 
 RUN make
 
-COPY darknet_wrapper_v4.sh .
+COPY darknet_wrapper.sh .
 
-ENTRYPOINT ["./darknet_wrapper_v4.sh"]
+ENTRYPOINT ["./darknet_wrapper.sh"]
 
 CMD ["detector", "test", "cfg/coco.data", "cfg/yolov4.cfg", "yolov4.weights"]
