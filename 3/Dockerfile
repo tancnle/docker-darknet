@@ -16,13 +16,13 @@ RUN mkdir /output
 
 WORKDIR /darknet
 
-# Download weights for YOLOv3 dection
+# Download weights for YOLOv3 detection
 RUN curl -sSLO https://pjreddie.com/media/files/yolov3.weights
 
 RUN make
 
-COPY darknet.sh ./
+COPY darknet_wrapper.sh ./
 
-ENTRYPOINT ["./darknet.sh"]
+ENTRYPOINT ["./darknet_wrapper.sh"]
 
 CMD ["detect", "cfg/yolov3.cfg", "yolov3.weights", "-out", "/output/prediction"]

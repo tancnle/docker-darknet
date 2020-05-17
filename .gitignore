@@ -1,4 +1,4 @@
-output/*
+**/output/*
 
 # but keep the folder
-!output/.keep
+!**/output/.keep
