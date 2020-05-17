@@ -6,7 +6,8 @@ RUN apt-get update \
     build-essential=12.* \
     ca-certificates=* \
     curl=7.58.* \
-    gcc=4:7.3.* \
+    g++=4:7.* \
+    gcc=4:7.* \
     git=1:2.17* \
   && rm -rf /var/lib/apt/lists/*
 
